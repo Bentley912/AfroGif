@@ -1,9 +1,23 @@
 var searchCat;
 var results;
 
+var counter = 10;
+
+var starters = ["boondocks", "issa rae", "afro", "black people", "atlanta", "chapelle"];
+
+var button = $('<button>');
+
+  for (var i=0; i < starters.length;i++){
+    var button = $('<button/>');
+    $(button).attr('class', 'btn btn-danger search-button gifRequest');
+    $(button).html(starters[i]);
+    $(button).attr('data-category', starters[i]);
+    $('#button-area').append(button);
+  }
+
   $('#gifCategory').on('click', function(){
     var category = $('#gifInput').val();
-    var button = $('<button/>');
+     button = $('<button/>');
     $(button).attr('class', 'btn btn-danger search-button gifRequest');
     $(button).html(category);
     $(button).attr('data-category', category);
