@@ -1,3 +1,7 @@
+h2{
+  color:green;
+}
+
 .container{
 
 }
@@ -17,4 +21,10 @@ img{
 
 p{
   display:inline;
+}
+
+.footer img{
+  width:5em;
+  height:5em;
+  float:right;
 }
