@@ -1,11 +1,20 @@
 .container{
-  background-color: red;
+
 }
 
 #button-area{
-  background-color: blue;
+
 }
 
 #gifSpace{
   clear:both;
+}
+
+img{
+  margin:2em;
+  width:90%;
+}
+
+p{
+  display:inline;
 }

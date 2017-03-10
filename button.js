@@ -26,7 +26,26 @@ var button = $('<button>');
 
 
 
-    $(".gifRequest").on("click", function() {
+
+  });
+
+  $(document).on('click', 'img', function(){
+      var animated = $(this).attr('data-animated');
+      var still = $(this).attr('data-still');
+
+      if ($(this).attr('src') === still) {
+      $(this).attr('src', animated);
+      clickTracker = false;
+      console.log(clickTracker);
+    }
+    else if ($(this).attr('src') === animated){
+      $(this).attr('src', still);
+    }
+    })
+
+
+  $(document).on('click', '.gifRequest', function(){
+
           $('#gifSpace').empty();
         var searchCat = $(this).attr('data-category');
         console.log(searchCat);
@@ -43,12 +62,18 @@ var button = $('<button>');
             console.log(results);
             for(var i = 0;i < results.length; i++){
               var image = $('<img>');
-              $('#gifSpace').append("Boom!!");
+              var p = $('<p>')
+              var div = $('<div>');
+              $(div).addClass('col-lg-6 col-md-6 col-sm-6 col-xs-6')
               $(image).attr('src', results[i].images.fixed_height_still.url);
-              $('#gifSpace').append(image);
+              $(image).attr('data-animated', results[i].images.fixed_height.url);
+              $(image).attr('data-still',results[i].images.fixed_height_still.url);
+              $(p).html('rating: ' +results[i].rating);
+              $(div).append(image);
+              $(div).append(p);
+              $('#gifSpace').append(div);
 
             }
 
           });
     });
-  });
