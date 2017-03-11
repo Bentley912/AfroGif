@@ -65,13 +65,13 @@ var button = $('<button>');
               var p = $('<p>');
               var p2 = $('<p>');
               var div = $('<div>');
-              $(div).addClass('col-lg-6 col-md-6 col-sm-6 col-xs-6')
+              $(div).addClass('col-lg-5 col-md-5 col-sm-5 col-xs-5 gif')
               $(image).attr('src', results[i].images.fixed_height_still.url);
               $(image).attr('data-animated', results[i].images.fixed_height.url);
               $(image).attr('data-still',results[i].images.fixed_height_still.url);
               $(p).html('rating: ' +results[i].rating+ '<br>');
               $(p2).html('URL: '+"<a href=" +results[i].bitly_gif_url +">" + results[i].bitly_gif_url+"</a>");
-                                  
+
               $(div).append(image);
               $(div).append(p);
               $(div).append(p2);

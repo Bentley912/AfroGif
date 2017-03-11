@@ -3,7 +3,7 @@ h2{
 }
 
 .container{
-
+margin:auto;
 }
 
 #button-area{
@@ -12,11 +12,14 @@ h2{
 
 #gifSpace{
   clear:both;
+  margin:auto;
 }
 
 img{
   margin:2em;
-  width:90%;
+  width:25em;
+  height:25em;
+
 }
 
 p{
@@ -27,4 +30,8 @@ p{
   width:5em;
   height:5em;
   float:right;
+}
+.gif{
+  margin:auto;
+  text-align: center;
 }
